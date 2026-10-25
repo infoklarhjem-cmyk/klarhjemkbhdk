@@ -1,0 +1,147 @@
+:root{
+  --ink:#13231e;--ink-2:#2f3f39;--green:#3f8432;--green-dark:#2f6a25;--green-light:#8fcf7c;
+  --mint:#edf5ea;--cream:#f7f7f3;--muted:#5f6d67;--line:#e1e7e1;--white:#fff;--deep:#0d201b;
+  --radius:16px;--shadow:0 1px 2px rgba(19,35,30,.04),0 10px 30px rgba(19,35,30,.06)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--green-light);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:100}.skip:focus{left:12px}
+
+/* Header */
+.site-header{background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.03em;font-size:1.2rem;line-height:1.1}
+.brand small{display:block;font-size:.56rem;letter-spacing:.26em;font-weight:650;color:var(--muted);margin-top:2px}
+.brand .hl{color:var(--green)}
+.logo{width:40px;height:40px;flex:none}
+.navlinks{display:flex;align-items:center;gap:28px;font-size:.93rem;font-weight:550}
+.navlinks a{text-decoration:none;color:var(--ink-2)}.navlinks a:not(.btn):hover{color:var(--green)}
+.nav-phone{display:inline-flex;align-items:center;gap:7px;font-weight:650}
+.nav-phone svg{width:16px;height:16px;color:var(--green)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#fff!important;padding:13px 22px;border-radius:10px;text-decoration:none;font:inherit;font-weight:700;border:1px solid transparent;cursor:pointer;transition:background .15s,transform .15s,box-shadow .15s}
+.btn:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:0 6px 18px rgba(63,132,50,.25)}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.55)}.btn.ghost:hover{background:rgba(255,255,255,.1);box-shadow:none}
+.btn.small{padding:10px 16px;font-size:.9rem}
+.btn svg{width:18px;height:18px}
+
+/* Hero */
+.hero{position:relative;color:#fff;padding:110px 0 100px;background:var(--deep) center/cover no-repeat;background-image:linear-gradient(100deg,rgba(9,28,23,.93) 0%,rgba(9,28,23,.78) 45%,rgba(9,28,23,.35) 100%),url('/.netlify/images?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511818966892-d7d671e672a2&w=1800&q=75')}
+.hero-inner{max-width:680px}
+.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:750;color:var(--green)}
+.hero .eyebrow{color:var(--green-light)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.03;letter-spacing:-.045em;margin:16px 0 20px;font-weight:800}
+.hero p{font-size:1.14rem;max-width:560px;color:#e3ebe6;margin:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero-contact{margin-top:28px;font-size:.92rem;color:#c8d6ce}.hero-contact a{color:#fff;font-weight:650;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+
+/* Trust bar */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:26px 0}
+.trust-item{display:flex;gap:14px;align-items:center}
+.icon{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--mint);color:var(--green);flex:none}
+.icon svg{width:22px;height:22px}
+.trust-item strong{display:block;font-size:.95rem}.trust-item span{font-size:.84rem;color:var(--muted)}
+
+/* Sections */
+section{padding:88px 0}
+.section-head{max-width:640px;margin-bottom:40px}
+h2{font-size:clamp(1.9rem,3.6vw,2.7rem);letter-spacing:-.035em;line-height:1.12;margin:10px 0 14px;font-weight:800}
+.lead{color:var(--muted);font-size:1.06rem;margin:0}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s}
+.service:hover{transform:translateY(-3px);border-color:#cfe1c9;box-shadow:0 14px 36px rgba(19,35,30,.09)}
+.service h3{font-size:1.18rem;margin:18px 0 8px;letter-spacing:-.01em}
+.service p{color:var(--muted);font-size:.94rem;margin:0 0 18px;flex:1}
+.service a{color:var(--green);font-weight:700;text-decoration:none;font-size:.93rem}.service a:hover{text-decoration:underline}
+
+.steps-band{background:#fff;border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+.step{position:relative;padding:28px;border-radius:var(--radius);background:var(--cream);border:1px solid var(--line)}
+.step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;margin-bottom:16px}
+.step h3{margin:0 0 6px;font-size:1.08rem}.step p{margin:0;color:var(--muted);font-size:.94rem}
+
+.price-band{background:var(--mint)}
+.pricing{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.price-card{background:#fff;border-radius:20px;padding:34px;border:1px solid #d6e6d0;box-shadow:var(--shadow)}
+.price{font-size:2.6rem;letter-spacing:-.04em;font-weight:800;line-height:1.1;margin:8px 0 10px}
+.price small{font-size:.95rem;letter-spacing:0;font-weight:600;color:var(--muted)}
+.price-card p{color:var(--muted);margin:0}
+.checks{padding:0;list-style:none;margin:22px 0 26px}
+.checks li{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
+.checks svg{width:20px;height:20px;color:var(--green);flex:none;margin-top:2px}
+
+.booking{background:#fff}
+.booking-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.contact-card{background:var(--ink);color:#fff;padding:30px;border-radius:20px;margin-top:30px}
+.contact-card h3{margin:0 0 14px;font-size:1.1rem}
+.contact-line{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid rgba(255,255,255,.1);color:#dbe6df;text-decoration:none}
+.contact-line:hover{color:#fff}
+.contact-line svg{width:18px;height:18px;color:var(--green-light);flex:none}
+.contact-card .small{font-size:.84rem;color:#a9bab0;margin:14px 0 0}
+
+form.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:30px}
+.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
+label{font-size:.87rem;font-weight:650}
+input,select,textarea{width:100%;border:1px solid #cdd8ce;border-radius:10px;padding:12px 13px;font:inherit;font-size:.98rem;background:#fff;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(143,207,124,.45)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.88rem;color:var(--ink-2)}
+.consent input{width:18px;height:18px;margin:2px 0 0;flex:none;accent-color:var(--green)}
+.consent a{color:var(--green)}
+.form-foot{font-size:.82rem;color:var(--muted);grid-column:1/-1;margin:0}
+.form-actions{grid-column:1/-1}
+.hidden{display:none}
+
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px}
+.faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--green);font-size:1.3rem;line-height:1;font-weight:600}
+.faq details[open] summary:after{content:"–"}
+.faq details p{color:var(--muted);font-size:.94rem;margin:12px 0 0}
+
+/* Footer */
+.site-footer{background:var(--deep);color:#fff;padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.site-footer .brand small{color:#a9bab0}.site-footer .brand .hl{color:var(--green-light)}
+.site-footer p{color:#b9c8bf;font-size:.92rem;margin:14px 0 0}
+.site-footer h4{margin:4px 0 12px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#8ea398}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{color:#dce8df;text-decoration:none;font-size:.93rem}.footer-links a:hover{color:#fff;text-decoration:underline}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;font-size:.82rem;color:#8ea398;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* Simple pages (legal, thank-you, 404) */
+.page{background:#fff;margin:40px auto 56px;padding:clamp(24px,5vw,56px);border:1px solid var(--line);border-radius:20px;max-width:860px}
+.page h1{font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.12;letter-spacing:-.035em;margin:8px 0 6px}
+.page h2{margin:34px 0 8px;font-size:1.18rem;letter-spacing:-.01em}
+.page p,.page li{color:var(--ink-2)}
+.page a{color:var(--green)}
+.meta{font-size:.87rem;color:var(--muted);margin:0 0 24px}
+.center-page{min-height:calc(100vh - 77px);display:grid;place-items:center;padding:40px 0}
+.center-page .page{margin:0;text-align:center;max-width:580px}
+.center-page .icon{margin:0 auto 10px;width:56px;height:56px;border-radius:50%}
+.center-page .btn{margin-top:14px}
+
+@media (max-width:900px){
+  .services,.steps{grid-template-columns:1fr 1fr}
+  .pricing,.booking-grid{grid-template-columns:1fr;gap:36px}
+  .footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}
+}
+@media (max-width:680px){
+  .nav{height:68px}.navlinks{gap:12px}.navlinks a:not(.btn){display:none}
+  .hero{padding:76px 0 70px}
+  .trust-grid{grid-template-columns:1fr;gap:16px}
+  .services,.steps,.faq{grid-template-columns:1fr}
+  section{padding:60px 0}
+  form.booking-form{grid-template-columns:1fr;padding:22px}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}

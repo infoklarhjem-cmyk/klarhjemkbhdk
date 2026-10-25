@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" role="img" aria-labelledby="title desc">
+<title id="title">KlarHjem Copenhagen logo</title><desc id="desc">House roof and leaf symbol with KlarHjem Copenhagen wordmark in dark green and leaf green.</desc>
+<g transform="translate(10,8)">
+<path d="M12 52 58 12l46 40" fill="none" stroke="#14231f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31 51v39h54V51" fill="none" stroke="#438b35" stroke-width="7" stroke-linejoin="round"/>
+<path d="M2 91c19-4 32-17 39-36 4 21 20 34 43 37-25 16-55 16-82-1Z" fill="#438b35"/>
+<path d="M20 92 51 62" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+<path d="M109 19l5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2Z" fill="#438b35"/>
+</g>
+<text x="145" y="76" font-family="Arial, Helvetica, sans-serif" font-size="53" font-weight="800" letter-spacing="-2" fill="#14231f">KLAR<tspan fill="#438b35">HJEM</tspan></text>
+<text x="149" y="111" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="7" fill="#64716b">COPENHAGEN</text>
+</svg>
